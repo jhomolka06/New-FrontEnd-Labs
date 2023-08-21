@@ -45,7 +45,14 @@ Question 1: Declaring Let and Const variables`)
  * ↓ YOUR CODE HERE ↓ */
 
 //Question: Name a reason why you would use const instead of let.
-//Answer:
+//Answer:i would use const fi don't want that value to ever be changed. If iWantedToBeMutable.
+const food = "Lasagna";
+let drink = "Orange Juice" ;
+let myName = "Chris";
+let myFriendsName = "Nereida";
+console.log(food, drink, myName, myFriendsName);
+
+
 
 /*---------------------------------- Template Literals -------------------------------------*/
 console.log(`-------------------------- 
@@ -57,10 +64,14 @@ Question 2: Template Literals`)
  *
  *
  * ↓ YOUR CODE HERE ↓ */
+console.log(`My friend ${myFriendsName} & ${myName} are eating ${food} and drink ${drink}`) 
+
+
 
 //Question: How would the sentence you wrote look if you used string concatenation instead of template literals?
 //          console.log() your answer to check
 //Answer:
+console.log("My friend " + myFriendsName + " & " + myName + " are eating " + food + " and drink " + drink)
 console.log(`-------------------------- 
 Question 2a: Oh no`)
 
@@ -70,9 +81,10 @@ Question 2a: Oh no`)
  * Step 2: Make a change to your code in Question 1 to fix the error. Run your code to make sure it's fixed.
  *
  * ↓ YOUR CODE HERE ↓ */
-
+drink = "soda"
+console.log();
 //Question: Read the error message - in your own words - what does it mean?
-//Answer:
+//Answer: We tried to reassign a variable that was declared with "const" , const declarations cannot be reset reassigned.
 
 /*---------------------------------- Arrow Functions -------------------------------------*/
 console.log(`-------------------------- 
@@ -90,9 +102,17 @@ Question 3: Arrow Functions`)
  * Step 3: Copy the code below, ↓ paste it underneath our new function, and run the code.
  *         console.log(lunchTime('Pizza','Water'))
  * ↓ YOUR CODE HERE ↓ */
+//const lunchTime = (foodChoice,drinkChoice) => { 
+   //return `My friend ${myFriendsName} & ${myName} are eating ${foodChoice} and drinking ${drinkChoice}`
+//}
+const lunchTime = (foodChoice,drinkChoice) => `My friend ${myFriendsName} & ${myName} are eating ${foodChoice} and drinking ${drinkChoice}`
 
+
+console.log(lunchTime('Pizza','Water'))
 //Question: What would your function look like if we were using the old way of creating a function?
 //Answer:
+// return `My friend ${myFriendsName} & ${myName} are eating ${foodChoice} and drinking ${drinkChoice}`
+
 
 /*---------------------------------- Callbacks -------------------------------------*/
 console.log(`-------------------------- 
@@ -102,10 +122,17 @@ Question 4: Callbacks`)
  * You and your friend ALWAYS eat lunch, but it might be a good idea to plan for the next date in advance.
  * Let's use functions and callbacks to describe what we're eating today, and what we want tomorrow.
  *
- * Step 1: Create a ES6 fat arrow function called 'foodForTodayAndTomorrow' that takes 3 parameters: tomorrowsFoodChoice, tomorrowsDrinkChoice, and callbackFunction.
- * Step 2: Have your function return a new string in this format: `${callbackFunction} Tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}.`
- * Step 3: console.log() your new function, foodForTodayAndTomorrow, and pass in lunchTime('newFoodItem', 'newDrinkItem') as the argument for the "callbackFunction" parameter.
+ * Step 1: Create a ES6 fat arrow function called 'foodForTodayAndTomorrow' 
+ * that takes 3 parameters: tomorrowsFoodChoice, tomorrowsDrinkChoice, and callbackFunction.
+ * Step 2: Have your function return a new string in this format: `${callbackFunction} 
+ * Tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}.`
+ * Step 3: console.log() your new function, foodForTodayAndTomorrow, and pass in lunchTime('newFoodItem', 'newDrinkItem')
+ *  as the argument for the "callbackFunction" parameter.
  *
  * ↓ YOUR CODE HERE ↓ */
+const foodForTodayAndTomorrow = (tomorrowsFoodChoice, tomorrowsDrinkChoice, callbackFunction) => {
+   return `${callbackFunction} tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}`
+}
+console.log(foodForTodayAndTomorrow("Pizza", "soda", lunchTime("cheese", "Apple Juice") ))
 
 console.log(`-----------Finished------------`)
