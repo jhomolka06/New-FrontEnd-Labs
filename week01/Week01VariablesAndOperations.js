@@ -52,22 +52,28 @@ Question 1. Creating & 'console.log()'ing variables \n`);
  * ↓ YOUR CODE HERE ↓ */
 
 console.log("Step 1:  Number of Seats on a Plane");
-
+var availableFlightSeeds = 7;
+console.log("The number of Seeds left on this playing are " + availableFlightSeeds)
 
 console.log("Step 2:  Cost of Groceries");
-
+var costOfGroceries = 89.50
+console.log("The cost of groceries are " + costOfGroceries) 
 
 console.log("Step 3:  Middle Initial");
-
+var middleInitial = "j"
+console.log("My middle initial is " + middleInitial) 
 
 console.log("Step 4:  Is it Hot Outside?");
-
+var isHotOutside = false
+console.log("Is hot outside? " + isHotOutside) 
 
 console.log("Step 5:  First Name");
-
+var firstName = "Chris"
+console.log("The variable first name is: " + firstName)
 
 console.log("Step 6:  Street Address");
-
+var streetAddress = "12345 avenue Lane MythicalState";
+console.log("A random totally made of address is: " + streetAddress)
 
 /*-------------------------------------------------------*/
 
